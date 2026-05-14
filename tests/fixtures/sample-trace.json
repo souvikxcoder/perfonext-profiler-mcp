@@ -1,0 +1,60 @@
+{
+  "traceEvents": [
+    {
+      "cat": "disabled-by-default-v8.cpu_profiler",
+      "name": "Profile",
+      "ph": "P",
+      "pid": 1,
+      "tid": 1,
+      "ts": 100,
+      "args": {
+        "data": {
+          "startTime": 0
+        }
+      }
+    },
+    {
+      "cat": "disabled-by-default-v8.cpu_profiler",
+      "name": "ProfileChunk",
+      "ph": "P",
+      "pid": 1,
+      "tid": 1,
+      "ts": 200,
+      "args": {
+        "data": {
+          "cpuProfile": {
+            "nodes": [
+              { "id": 1, "callFrame": { "functionName": "(root)", "scriptId": "0", "url": "", "lineNumber": -1, "columnNumber": -1 } },
+              { "id": 2, "callFrame": { "functionName": "main", "scriptId": "1", "url": "https://example.com/app.js", "lineNumber": 5, "columnNumber": 0 }, "parent": 1 },
+              { "id": 3, "callFrame": { "functionName": "render", "scriptId": "1", "url": "https://example.com/app.js", "lineNumber": 20, "columnNumber": 0 }, "parent": 2 },
+              { "id": 4, "callFrame": { "functionName": "layout", "scriptId": "1", "url": "https://example.com/app.js", "lineNumber": 45, "columnNumber": 0 }, "parent": 3 },
+              { "id": 5, "callFrame": { "functionName": "(idle)", "scriptId": "0", "url": "", "lineNumber": -1, "columnNumber": -1 }, "parent": 1 }
+            ],
+            "samples": [2, 3, 4, 4, 4, 3, 3, 2, 5, 5]
+          },
+          "timeDeltas": [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]
+        }
+      }
+    },
+    {
+      "cat": "disabled-by-default-v8.cpu_profiler",
+      "name": "ProfileChunk",
+      "ph": "P",
+      "pid": 1,
+      "tid": 1,
+      "ts": 300,
+      "args": {
+        "data": {
+          "cpuProfile": {
+            "nodes": [
+              { "id": 6, "callFrame": { "functionName": "JSON.parse", "scriptId": "0", "url": "", "lineNumber": -1, "columnNumber": -1 }, "parent": 2 }
+            ],
+            "samples": [6, 6, 6, 4, 4, 3, 2, 6, 6, 5]
+          },
+          "timeDeltas": [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000],
+          "endTime": 200000
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@perfonext/profiler-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for loading and analyzing V8 and Chrome CPU profiles for GitHub Copilot and other MCP clients",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "perfonext-profiler-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "github-copilot",
+    "cpu-profiler",
+    "profiling",
+    "v8",
+    "chrome",
+    "cpuprofile",
+    "performance",
+    "nextjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souvikxcoder/perfonext-profiler-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/souvikxcoder/perfonext-profiler-mcp/issues"
+  },
+  "homepage": "https://github.com/souvikxcoder/perfonext-profiler-mcp#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "shx": "^0.4.0",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  }
+}
